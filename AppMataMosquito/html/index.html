@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>APP - Início Jogo</title>
+    
+    <link rel="stylesheet" href="../css/cssBootStrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="shortcut icon" href="../image/iconMosquito.png" type="image/x-icon">
+
+    <script>
+        
+        function iniciarJogo() {
+
+            var level = document.getElementById('level').value;
+            if (level === '') {
+                alert('Informe um nível para iniciar o jogo.');
+                return false;
+            };
+
+            window.location.href = 'jogo.html?' + level;
+        };
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img src="../image/game.png">
+                </div>                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select class="form-control" id="level">
+                            <option value="">-- Select Level --</option>                        
+                            <option value="easy">-- Easy --</option>
+                            <option value="normal">-- Normal --</option> 
+                            <option value="difficult">-- Difficult --</option>
+                            <option value="hard">-- Hard --</option>
+                        </select>
+                </div>
+                </div>                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger btn-lg border border-dark" 
+                    onclick="iniciarJogo()">Iniciar Jogo</button>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="../js/jsBootstrap/bootstrap.min.js"></script>
+</body>
+</html>
